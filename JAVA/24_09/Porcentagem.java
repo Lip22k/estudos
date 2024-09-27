@@ -38,5 +38,6 @@ public class Porcentagem {
         System.out.println("O "+nome1+" receberá: R$"+premio*porc1);
         System.out.println("O "+nome2+" receberá: R$"+premio*porc2);
         System.out.println("O "+nome3+" receberá: R$"+premio*porc3);
+        sc.close();
     }
 }

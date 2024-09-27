@@ -9,6 +9,7 @@ public class Bee1008Salario {
 
         System.out.println("NUMBER = " + numberId);
         System.out.println("SALARY = U$ " + String.format("%.2f" , (valorHora*hora)));
+        scanner.close();
 
     }
 }
