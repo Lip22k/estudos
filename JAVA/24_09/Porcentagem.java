@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Porcentagem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Digite o o nome do 1° investidor: ");
+        System.out.print("Digite o o  nome do 1° investidor: ");
         String nome1 = sc.next();
         System.out.print("Digite o o nome do 2° investidor: ");
         String nome2 = sc.next();
@@ -16,9 +16,7 @@ public class Porcentagem {
         double valor2 = sc.nextInt();
         System.out.print("Digite o 3° valor investido: ");
         double valor3 = sc.nextInt();
-        System.out.print("Digite o valor do premio: ");
-        double premio = sc.nextInt();
-
+        
         while (valor1 < 0 || valor2 < 0 || valor3 < 0) {
             if (valor1 < 0) {
                 System.out.print(nome1+" digite valor valido: ");
@@ -33,11 +31,18 @@ public class Porcentagem {
                 valor3 = sc.nextInt();
             }
         }
+        
+        double totalInvestido = valor1 + valor2 + valor3;
+        valor1 = valor1 / totalInvestido;
+        valor2 = valor2 / totalInvestido;
+        valor3 = valor3 / totalInvestido;
+        
+        System.out.print("Digite o valor do premio: ");
+        double premio = sc.nextInt();
 
-        double totalInvestido = valor1 + valor2 + valor3, porc1 = valor1 / totalInvestido, porc2 = valor2 / totalInvestido, porc3 = valor3 / totalInvestido;
-        System.out.println("O "+nome1+" receberá: R$"+premio*porc1);
-        System.out.println("O "+nome2+" receberá: R$"+premio*porc2);
-        System.out.println("O "+nome3+" receberá: R$"+premio*porc3);
+        System.out.println("O "+nome1+" receberá: R$"+String.format("%.2f",premio*valor1));
+        System.out.println("O "+nome2+" receberá: R$"+String.format("%.2f",premio*valor2));
+        System.out.println("O "+nome3+" receberá: R$"+String.format("%.2f",premio*valor3));
         sc.close();
     }
 }
