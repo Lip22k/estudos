@@ -31,7 +31,7 @@ public class Exer25RaizQuad {
         }else{
             System.out.print("Raiz impossivel");
         }
-
+        sc.close();
         // expressao = sc.nextLine().replaceAll("\\s+", " ");
 
     }
