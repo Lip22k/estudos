@@ -7,7 +7,4 @@ x = 5
 
 def funcao():
     x = 3
-    print("teste",x)
-funcao()
-
-print("teste",x)
+    print("teste", x)
