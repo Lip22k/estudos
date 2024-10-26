@@ -32,7 +32,7 @@ public class Compras {
             String parcelas="", aux;
             while (count<=10) {
                 if (count>6) {
-                    aux = count+"X de R$"+ String.format("%.2f", (valorCompra*count*0.02)/10);
+                    aux = count+"X de R$"+ String.format("%.2f", ((valorCompra+(valorCompra*count*0.02))/count));
                     parcelas = parcelas+aux+"\n";
                     count++;
                 }else{
@@ -45,7 +45,7 @@ public class Compras {
                 pagamento = Integer.parseInt(JOptionPane.showInputDialog(null, parcelas,"COMPRA DE VALORS", 2));
             }while(pagamento<2 || pagamento>10);
             if (pagamento>6) {
-                JOptionPane.showMessageDialog(null, "Você pagara "+pagamento+"X de R$"+ String.format("%.2f", (valorCompra*pagamento*0.02)/10), "COMPRA DE VALORS", 1);
+                JOptionPane.showMessageDialog(null, "Você pagara "+pagamento+"X de R$"+ String.format("%.2f", (valorCompra+(valorCompra*pagamento*0.02))/pagamento), "COMPRA DE VALORS", 1);
             }else{
                 JOptionPane.showMessageDialog(null, "Você pagara "+pagamento+"X de R$"+ String.format("%.2f", valorCompra/pagamento), "COMPRA DE VALORS", 1);
             }

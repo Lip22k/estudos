@@ -13,5 +13,6 @@ public class Bee1019ConverterTempo {
             minutos = minutos%60;
         }
         System.out.println(horas+":"+minutos+":"+segundos);
+        sc.close();
     }
 }
