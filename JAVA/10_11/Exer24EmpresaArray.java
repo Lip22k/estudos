@@ -8,6 +8,29 @@ de erro.
 */
 
 import javax.swing.JOptionPane;
+
+
+public class Exer24EmpresaArray {
+    public static void main(String[] args) {
+        boolean res = false;
+        String[] estados = {"mg","sp","rj","ms"};
+        double[] porc = {1.07, 1.12, 1.15, 1.08};
+
+        double valorProduto = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor do produto"));
+        String estadoImposto = JOptionPane.showInputDialog(null, "Digite o estado \n->MG - Minas Gerais \n->SP - São Paulo \n->RJ - Rio de Janeiro\n->MS - Mato Grosso do Sul");
+        
+        for (int i = 0; i < estados.length; i++) {
+            if (estados[i].equals(estadoImposto.toLowerCase())){
+                res = true;
+                JOptionPane.showMessageDialog(null, "O valor original do produto é: R$"+valorProduto+"\n o imposto do estado de "+estados[i]+" é de "+porc[i]+"%\n Você pagará no total: R$"+valorProduto*porc[i]);
+            }
+        }
+        if (res == false) {
+            JOptionPane.showMessageDialog(null, "O estado "+estadoImposto.toUpperCase()+" não está cadastrado na nossa base de dados, reinicie o programa e tente novamente.");
+        }
+    }
+}
+/*
 public class Exer24EmpresaArray {
 
     public static void main(String[] args) {
@@ -29,26 +52,4 @@ public class Exer24EmpresaArray {
             JOptionPane.showMessageDialog(null, "O estado "+estadoImposto.toUpperCase()+" não está cadastrado na nossa base de dados, reinicie o programa e tente novamente.");
         }
     }
-}
-/*
-public class Exer24EmpresaArray {
-    public static void main(String[] args) {
-        boolean res = false;
-        String[] estados = {"mg","sp","rj","ms"};
-        double[] porc = {1.07, 1.12, 1.15, 1.08};
-
-        double valorProduto = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor do produto"));
-        String estadoImposto = JOptionPane.showInputDialog(null, "Digite o estado \n->MG - Minas Gerais \n->SP - São Paulo \n->RJ - Rio de Janeiro\n->MS - Mato Grosso do Sul");
-        
-        for (int i = 0; i < estados.length; i++) {
-            if (estados[i].equals(estadoImposto.toLowerCase())){
-                res = true;
-                JOptionPane.showMessageDialog(null, "O valor original do produto é: R$"+valorProduto+"\n o imposto do estado de "+estados[i]+" é de "+porc[i]+"%\n Você pagará no total: R$"+valorProduto*porc[i]);
-            }
-        }
-        if (res == false) {
-            JOptionPane.showMessageDialog(null, "O estado "+estadoImposto.toUpperCase()+" não está cadastrado na nossa base de dados, reinicie o programa e tente novamente.");
-        }
-    }
-}
-*/
+}*/
