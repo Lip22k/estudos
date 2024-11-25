@@ -5,17 +5,31 @@ public class Bee1061Evento {
         Scanner sc = new Scanner(System.in);
         int diaInicio, horaInicio, minInicio, segInicio, diaFim, horaFim, minFim, segFim;
 
-        System.out.print("Dia: ");
-        diaInicio = sc.nextInt();
+        do {            
+            System.out.print("Dia: ");
+            diaInicio = sc.nextLine();
+        } while (diaInicio<0);
 
-        horaInicio = sc.nextInt();
+        // Limpando o buffer
+        sc.nextLine();
 
+        do {
+            horaInicio = sc.nextInt();
+        } while (horaInicio<0);
+
+        // Limpando o buffer
+        sc.nextLine();
         System.out.print(" : ");
-        minInicio = sc.nextInt();
+        do {
+            minInicio = sc.nextInt();
+        } while (minInicio<0);
+        // System.out.print("Dia: ");
+        // diaInicio = Integer.parseInt(sc.nextLine());
 
-        System.out.print(" : ");
-        segInicio = sc.nextInt();
-
-        System.out.print("\n"+horaInicio+" : "+minInicio+" : "+segInicio);
+        // horaInicio = Integer.parseInt(sc.nextLine());
+        // System.out.print(" : ");
+        
+        // minInicio = Integer.parseInt(sc.nextLine());
+        // System.out.print(" : ");
     }
 }

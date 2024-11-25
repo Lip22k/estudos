@@ -9,7 +9,8 @@ public class Compras2 {
 
         valorCompra = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor da compra", "COMPRA DE VALORS", 2));
         
-        while(valorCompra<=0){
+        while(valorCompra<=
+        0){
             JOptionPane.showMessageDialog(null, "DIGITE O PREÇO CORRETO DO PRODUTO", null, 0);
             valorCompra = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor da compra", "COMPRA DE VALORS", 2));
         }
