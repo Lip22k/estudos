@@ -13,18 +13,15 @@ public class Bee1051Imposto {
         if (salario<2000){
             System.out.println("Isento");
         }else if (salario<3000.01) {
-            salario = salario-2000;
-            imposto = 0.08*((salario%1000));
+            imposto = 0.08*(salario-2000);
             System.out.println("R$ "+String.format("%.02f", imposto));
         }else if (salario<4500.01) {
-            salario = salario-3000;
             aux = 0.08*1000;
-            imposto = 0.18*((salario%1000))+aux;
+            imposto = 0.18*(salario-3000)+aux;
             System.out.println("R$ "+String.format("%.02f", imposto));
         }else{
-            salario = salario-4500;
             aux = 0.08*1000+0.18*1500;
-            imposto = 0.28*((salario%1000))+aux;
+            imposto = 0.28*(salario-4500)+aux;
             System.out.println("R$ "+String.format("%.02f", imposto));
         }
     }
