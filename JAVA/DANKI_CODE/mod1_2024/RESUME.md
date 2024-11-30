@@ -4,7 +4,7 @@
 <details open>
 
 <summary>Aula 1 - Introdução ao Netbeams</summary>
-O NetBeams é a IDE que utiliza Java para criar interfaces para suas aplicações. Para isso:
+O _**NetBeams**_ é a IDE que utiliza Java para criar interfaces para suas aplicações. Para isso:
 
 > Clicamos com o botão direito do mouse em "Source Package"
 
