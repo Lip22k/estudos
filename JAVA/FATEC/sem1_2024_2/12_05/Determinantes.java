@@ -48,7 +48,7 @@ public class Determinantes {
             System.out.print("\n");
         }
 
-
+        sc.close();
          
     }
 }
