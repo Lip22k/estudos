@@ -12,14 +12,12 @@ public class Bee1051Imposto {
         // salarop = 3002.00
         if (salario<=2000){
             System.out.println("Isento");
-<<<<<<< HEAD:JAVA/10_11/Bee1051Imposto.java
         }else if (salario<3000.01) {
             imposto = 0.08*(salario-2000);
             System.out.println("R$ "+String.format("%.02f", imposto));
         }else if (salario<4500.01) {
             aux = 0.08*1000;
             imposto = 0.18*(salario-3000)+aux;
-=======
         }else if (salario<=3000) {
             salario = salario-2000;
             imposto = 0.08*(salario%1000);
@@ -28,15 +26,11 @@ public class Bee1051Imposto {
             salario = salario-3000;
             aux = 0.08*1000;
             imposto = 0.18*(salario%1000)+aux;
->>>>>>> 442ad329e3bed625ed5e26112c4518e4c225c893:JAVA/FATEC/sem1_2024_2/11_05/Bee1051Imposto.java
             System.out.println("R$ "+String.format("%.02f", imposto));
         }else{
             aux = 0.08*1000+0.18*1500;
-<<<<<<< HEAD:JAVA/10_11/Bee1051Imposto.java
             imposto = 0.28*(salario-4500)+aux;
-=======
             imposto = 0.28*(salario%1000)+aux;
->>>>>>> 442ad329e3bed625ed5e26112c4518e4c225c893:JAVA/FATEC/sem1_2024_2/11_05/Bee1051Imposto.java
             System.out.println("R$ "+String.format("%.02f", imposto));
         }
     }
