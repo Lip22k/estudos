@@ -23,9 +23,6 @@ public class Compras {
             vistoPrazo = sc.nextInt();
         }while (vistoPrazo!=1 && vistoPrazo!=2);
         
-        // Limpando o Buffer
-        sc.nextLine();
-        
         if (vistoPrazo == 1) {
             do{
                 System.out.println("Pagamento a VISTA escolhido");

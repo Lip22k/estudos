@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Exer39Salario {
-
+/*
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double salario, bonus;
@@ -51,8 +51,39 @@ public class Exer39Salario {
             System.out.print("\nSeu salario será: "+salario);
         }else{
             System.out.print("\nSeu salario será: "+(salario+bonus));
-
         }
         sc.close();
+    }*/
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double[] salariosMinimos={2000, 1500, 1000, 500}, bonus = {100,200, 300, 500};
+        int[] tempoServico = {10,6,3,1}, reajuste = {25, 20, 15, 10};
+
+        double salario;
+        int tempoServicoTrabalhado;
+
+        String textoReajuste="", textoBonus="";
+        do {
+            System.out.print("Qual o valor do Salario: ");
+            salario=sc.nextDouble();
+            System.out.print("Quantos anos está trabalhando na empresa: ");
+            tempoServicoTrabalhado=sc.nextInt();
+        } while (tempoServicoTrabalhado < 0 || salario < 0);
+
+        for (int i = 0; i < salariosMinimos.length; i++) {
+            if (salario<=salariosMinimos[i]) {
+                textoReajuste="Você terá um reajuste de: "+reajuste[i]+"%";
+            }else{
+                textoReajuste = "Seu salario não terá reajuste";
+            }
+        }
+        for (int i = 0; i < tempoServico.length; i++) {
+            if (tempoServicoTrabalhado<=tempoServico[i]) {
+                textoBonus="Você terá um BÔNUS de: "+bonus[i];
+            }else{
+                textoBonus = "Você não possui idade suficiente para receber um bônus";
+            }
+        }
+        System.out.println("Seu salario atual é de: R$"+String.format("%.2f", salario)+"\n"+textoReajuste+"\n"+textoBonus);
     }
-}
+} 

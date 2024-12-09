@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 public class Exer24EmpresaArray {
     public static void main(String[] args) {
         boolean res = false;
-        String[] estados = {"mg","sp","rj","ms"};
+String[] estados = {"mg","sp","rj","ms"};
         double[] porc = {1.07, 1.12, 1.15, 1.08};
 
         double valorProduto = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor do produto"));
